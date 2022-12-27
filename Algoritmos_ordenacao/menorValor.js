@@ -19,6 +19,7 @@ console.log(`o livro mais barato custa ${precosLivros[maisBarato]}`)
 
 const livros = require("./listaLivros.js") // importando de listaLivros
 
+/*
 let maisBarato = 0;
 for (let atual = 0; atual < livros.length; atual++) {
     if (livros[atual].preco < livros[maisBarato].preco) {
@@ -27,3 +28,18 @@ for (let atual = 0; atual < livros.length; atual++) {
 }
 
 console.log(`o livro mais barato custa ${livros[maisBarato].preco} e o titulo é ${livros[maisBarato].titulo}`)
+*/
+
+// Utilizado no arquivo selectionSort.js
+function menorValor(arrProdutos, posInicial) {
+    let maisBarato = posInicial;
+    
+    for (let atual = posInicial; atual < arrProdutos.length; atual++) {
+        if (arrProdutos[atual].preco < arrProdutos[maisBarato].preco) {
+        maisBarato = atual
+        }     
+    }
+    return maisBarato;  
+}
+
+module.exports = menorValor;
