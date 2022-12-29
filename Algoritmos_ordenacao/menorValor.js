@@ -43,3 +43,10 @@ function menorValor(arrProdutos, posInicial) {
 }
 
 module.exports = menorValor;
+
+// Analisando a complexidade do codigo
+// Temos um for que pode ser executado infinitas vezes dependendo do parametro
+// Dentro dele temos um if que sera executado ou não a cada bloco do for. Sera executado apenas se a condição for verdadeira
+// No exemplo dos livros, podemos executar no minimo 6 operações (pois todas entram no for) até no máximo 12 operações (considerando que todas as operações entram no if)
+// Ele faz entre N e 2N operações. Na notação oficial O(n)
+// Neste caso, crescem de forma linear
